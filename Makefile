@@ -21,3 +21,12 @@ ps:
 
 sh:
 	docker-compose exec app sh
+
+prisma-generate:
+	docker-compose exec app npx prisma db push
+
+prisma-generate:
+	docker-compose exec app npx prisma generate
+
+prisma-migrate-int:
+	docker-compose exec app npx prisma migrate dev --name init
